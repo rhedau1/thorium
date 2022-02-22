@@ -7,13 +7,13 @@ const router = express.Router();
 const lodash = require('lodash')
 
 router.get('/test-me', function (req, res) {
-    obj.welcome('Welcome to my application. I am surajBhoyar and a part of FunctionUp Thorium cohort.')
+    obj.welcome('Welcome to my application. I am rahulHedau and a part of FunctionUp Thorium cohort.')
     today.printDate()
     today.printMonth()
     today.getBatchInfo()
-    textFormatter.whiteSpaceRemover("   Suraj Bhoyar     ")
-    textFormatter.changetoLowerCase("SuRaJ BhOyaR")
-    textFormatter.changetoUpperCase("sURaj BHoyar")
+    textFormatter.whiteSpaceRemover("  rahul Hedau     ")
+    textFormatter.changetoLowerCase("RaHuL HeDaU")
+    textFormatter.changetoUpperCase("raHUl HeDau")
     res.send('My first ever api!')
 });
 
