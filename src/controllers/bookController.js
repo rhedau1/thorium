@@ -3,7 +3,7 @@ const authorModel = require("../models/authorModel")
 const bookModel= require("../models/bookModel")
 const publisherModel = require("../models/publisherModel")
 
-const createBook= async function (req, res) {
+const newBook= async function (req, res) {
     let book = req.body
     let authorId = book.author
     let publisherId = book.publisher
@@ -26,11 +26,11 @@ const createBook= async function (req, res) {
     return res.send({data: bookCreated})
 }
 
-const getBooks= async function (req, res) {
+const getBooksdata= async function (req, res) {
     let books = await bookModel.find().populate('author publisher')
     res.send({data: books})
 }
 
 
-module.exports.createBook= createBook
-module.exports.getBooks= getBooks
+module.exports.newBook= newBook
+module.exports.getBooksdata= getBooksdata
