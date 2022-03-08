@@ -21,6 +21,12 @@ let globalMiddleware = function(req, res, next){
     let name = "functionup"
     req.headers.organisation = name
     //console.log('content-type header is '+contentTypeHeader)
+let contenttypeHeader=req.headersisfreeappuser;
+if(!contenttypeHeader){
+    res.send("plz enter a header")
+}
+
+
     console.log('After adding custom header '+JSON.stringify(req.headers))
     console.log('Before adding custom response header '+JSON.stringify(res.getHeaders()))
     res.setHeader('batch','thorium')
